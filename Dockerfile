@@ -1,8 +1,8 @@
 # Dockerfile
-FROM python:3.7
-COPY requirements.txt /flask-example/requirements.txt
-WORKDIR /orderapp
+FROM python:3.10
+COPY requirements.txt /app/requirements.txt
+WORKDIR /app
 RUN pip install -r requirements.txt
-COPY . /flask-example
+COPY . /app
 ENTRYPOINT ["python"]
 CMD ["app.py"]
